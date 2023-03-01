@@ -1,17 +1,17 @@
 import { useState } from "react";
-import "./dropdown.css";
+import "./Dropdown.css";
 
-export const Dropdown = ({selected, setSelected})=> {
+export const ProfileButtons = ({selected, setSelected})=> {
     const [isActive, setIsActive] = useState(false);
     const options = ["View Profile", "Achievements", "Logout"];
     return (
-    <div className="dropdown">
-        <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
+    <div className="profile">
+        <div className="profile-button" onClick={(e) => setIsActive(!isActive)}>
             Account Name
             <span className="fas fa-caret-down"></span>
         </div>
         {isActive && (
-            <div className="dropdown-content">
+            <div className="profile-content">
                 {options.map(option => (
                     <div
                      onClick={(e) => 
@@ -19,7 +19,7 @@ export const Dropdown = ({selected, setSelected})=> {
                         setIsActive(false);
                     }   
                     }  
-                        className="dropdown-item">
+                        className="profile-item">
                             {option}
                         </div>
                 ))}

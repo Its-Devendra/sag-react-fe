@@ -23,7 +23,7 @@ export const Home = () => {
       return;
     }
 
-    if (!isAuthenticated() && false) {
+    if (!isAuthenticated() ) {
       return (
         <Button
           className="home-page-login-button"
@@ -36,7 +36,7 @@ export const Home = () => {
     }
 
     // TODO: Show profile buttons if authenticated
-    return(<Dropdown/>)
+    return<Dropdown/>
   };
 
   return (
