@@ -5,6 +5,7 @@ import { PageWrapper } from './components';
 import { isAuthenticated } from '../../helpers';
 import './Home.css';
 import { Login } from '../Login';
+import { Dropdown } from './components/Profilebtn';
 
 export const Home = () => {
   // Hooks.
@@ -22,7 +23,7 @@ export const Home = () => {
       return;
     }
 
-    if (!isAuthenticated()) {
+    if (!isAuthenticated() && false) {
       return (
         <Button
           className="home-page-login-button"
@@ -35,6 +36,7 @@ export const Home = () => {
     }
 
     // TODO: Show profile buttons if authenticated
+    return(<Dropdown/>)
   };
 
   return (
