@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Dropdown.css";
+import "./ProfileButtons.css";
 
 export const ProfileButtons = ({selected, setSelected})=> {
     const [isActive, setIsActive] = useState(false);
