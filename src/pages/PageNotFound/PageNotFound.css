@@ -1,7 +1,82 @@
 .page-not-found-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
+  align-items: self-start;
+  width: 100%;
+  height: 100%;
+  background-color: #ededed;
+  box-sizing: border-box;
+  position: absolute;
+  border: 10px solid #ffffff;
+  border-radius: 3.75rem;
+}
+
+.page-not-found-container-text {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.06rem;
+  /* padding-bottom: 5rem; */
+}
+
+h1 {
+  color: #0c3b5b;
+  font-weight: 600;
+  font-size: 10rem;
+  margin-left: 8rem;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 3rem;
+  margin-left: 8rem;
+}
+
+h3 {
+  font-weight: 525;
+  font-size: 1.3rem;
+  margin-left: 8rem;
+}
+
+.small-text-1 {
+  margin-top: 2rem;
+}
+
+.small-text-2 {
+  margin-bottom: 2rem;
+}
+
+.spacial-color-text {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-left: 0.6rem;
+  color: #0c3b5b;
+}
+
+.button {
+  font-size: 1.7rem; 
+  margin-left: 8rem;
+  margin-bottom: 3rem;
+  
+
+}
+
+.page-not-found-container-text-semi {
+  display: flex;
+  flex-direction: row;
+}
+
+img {
+  position: absolute;
+  width: 40rem;
+  height: 35rem;
+  right: 0rem;
+  bottom: 0rem;
+}
+
+.button-text{
+   font-size: 1.3rem; 
+  padding: .2rem;
+  margin-left:2.5rem ;
+  margin-right:2.5rem ;
 }
