@@ -30,20 +30,20 @@ const EventCalendar = () => {
 
   const getWeekStart = (date) => {
     const day = date.getDay();
-    const diff = date.getDate() - day + (day === 0 ? -6 : 1); 
+    const diff = date.getDate() - day + (day === 0 ? -6 : 1);
     return new Date(date.getFullYear(), date.getMonth(), diff);
   };
 
   const getWeekEnd = (date) => {
     const startOfWeek = getWeekStart(date);
     const endOfWeek = new Date(startOfWeek);
-    endOfWeek.setDate(endOfWeek.getDate() + 6); 
+    endOfWeek.setDate(endOfWeek.getDate() + 6);
     return endOfWeek;
   };
 
   return (
     <div className="Calendar">
-        <button className='calendar-button' onClick={handleCalendarClick}>
+      <button className="calendar-button" onClick={handleCalendarClick}>
         <Icon iconIdentifier={IconIdentifier.Calendar} />
       </button>
       {showCalendar && (
@@ -68,10 +68,7 @@ const EventCalendar = () => {
         </div>
       )}
     </div>
-
   );
 };
 
 export default EventCalendar;
-
-
