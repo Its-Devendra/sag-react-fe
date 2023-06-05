@@ -4,14 +4,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './app.css';
 import { AuthRoute, ProtectedRoute, PublicRoute } from './helpers';
 import PageNotFound from './pages/PageNotFound';
-import {
-  Home,
-  Login,
-  Events,
-  About,
-  Clubs,
-  Sports,
-} from './pages';
+import { Home, Login, Events, About, Clubs, Sports } from './pages';
 
 const App = () => {
   return (
