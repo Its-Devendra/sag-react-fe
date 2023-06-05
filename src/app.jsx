@@ -3,10 +3,10 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import './app.css';
 import { AuthRoute, ProtectedRoute, PublicRoute } from './helpers';
+import PageNotFound from './pages/PageNotFound';
 import {
   Home,
   Login,
-  PageNotFound,
   Events,
   About,
   Clubs,
