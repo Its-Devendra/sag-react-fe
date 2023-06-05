@@ -3,9 +3,9 @@
  * @param {GoogleLoginResponse}
  * @returns {GoogleLoginResponseObject}
  */
-export const googleLoginResponseMapper = (response) => {
+export const googleLoginResponseMapper = (responseData) => {
   return {
-    accessToken: response['access_token'],
-    refreshToken: response['refresh_token'],
+    accessToken: responseData['access_token'],
+    refreshToken: responseData['refresh_token'],
   };
 };

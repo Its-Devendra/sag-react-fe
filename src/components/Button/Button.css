@@ -26,6 +26,10 @@
   background-color: var(--color-primary);
   color: white;
 }
+.sag-button--primary.show {
+  background-color: var(--color-primary);
+  color: white;
+}
 
 .sag-button--secondary {
   background-color: white;
@@ -41,6 +45,10 @@
   filter: none;
 }
 .sag-button--secondary:focus {
+  background-color: white;
+  color: var(--color-primary);
+}
+.sag-button--secondary.show {
   background-color: white;
   color: var(--color-primary);
 }

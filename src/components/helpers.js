@@ -19,8 +19,9 @@ export const Colors = {
   Black400: '#A7A7A7',
 
   // Whites.
-  White: 'white',
+  White: '#FFFFFF',
 
   // Customs.
   HyperlinkBlue: '#729AE8',
+  LogoutRed: '#DC3545',
 };

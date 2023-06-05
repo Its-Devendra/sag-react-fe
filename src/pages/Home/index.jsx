@@ -1,15 +1,47 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { Button, ButtonVariant } from '../../components';
-import { PageWrapper, SideBar } from './components';
-import { isAuthenticated } from '../../helpers';
+import {
+  NotificationButton,
+  ProfileDropdown,
+  PageWrapper,
+  SideBar,
+} from './components';
+import { isAuthenticated, logout } from '../../helpers';
 import { Login } from '../Login';
 import './Home.css';
+import { userLoggedInUserInfo as useLoggedInUserInfo } from '../../api/user/user-api';
+import { GlobalContext } from '../../context';
+import { toast } from 'react-toastify';
 
 export const Home = () => {
-  // Hooks.
+  // React Router Hooks.
   const navigate = useNavigate();
   const { pathname } = useLocation();
+
+  // Context.
+  const { setLoggedInUser } = useContext(GlobalContext);
+
+  // API Hooks.
+  const {
+    data: loggedInUserResponse,
+    isSuccess: isSuccessLoggedInUserRequest,
+    isError: isErrorLoggedInUserRequest,
+  } = useLoggedInUserInfo(isAuthenticated());
+
+  // UseEffects.
+  useEffect(() => {
+    if (isSuccessLoggedInUserRequest && loggedInUserResponse) {
+      setLoggedInUser(loggedInUserResponse);
+    } else if (isErrorLoggedInUserRequest) {
+      toast.error("Couldn't fetch user info");
+      logout();
+    }
+  }, [
+    loggedInUserResponse,
+    isSuccessLoggedInUserRequest,
+    isErrorLoggedInUserRequest,
+  ]);
 
   // Handlers.
   const onClickLoginHandler = () => {
@@ -24,23 +56,26 @@ export const Home = () => {
 
     if (!isAuthenticated()) {
       return (
-        <Button
-          className="home-page-login-button"
-          variant={ButtonVariant.Secondary}
-          onClick={onClickLoginHandler}
-        >
+        <Button variant={ButtonVariant.Secondary} onClick={onClickLoginHandler}>
           Login
         </Button>
       );
     }
 
-    // TODO: Show profile buttons if authenticated
+    return (
+      <>
+        <NotificationButton />
+        <ProfileDropdown />
+      </>
+    );
   };
 
   return (
     <div className="home">
       {/* Profile Button Components */}
-      {renderProfileButtons()}
+      <div className="home__profile-buttons-container">
+        {renderProfileButtons()}
+      </div>
 
       {/* Navigation Panel Component */}
       <SideBar />

@@ -18,3 +18,9 @@
   color: var(--color-hyperlink-blue);
   text-decoration: none;
 }
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

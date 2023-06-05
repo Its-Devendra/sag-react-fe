@@ -45,7 +45,7 @@ export const handleRefreshToken = async () => {
   try {
     const refreshToken = TokenManager.getRefreshToken();
     if (refreshToken) {
-      const res = await api.post('/user/auth/refresh', {
+      const res = await api.post('/user/token/refresh/', {
         refresh: TokenManager.getRefreshToken(),
       });
 

@@ -9,11 +9,11 @@ export const generateGoogleOAuthUrl = () => {
   authUrl.searchParams.append('response_type', 'code');
   authUrl.searchParams.append(
     'scope',
-    'https://www.googleapis.com/auth/drive.metadata.readonly',
+    import.meta.env.VITE_GOOGLE_LOGIN_SCOPES.toString(),
   );
   authUrl.searchParams.append(
     'hd',
-    import.meta.env.VITE_GOOGLE_HOST_DOMAIN.toString(),
+    import.meta.env.VITE_GOOGLE_LOGIN_HOST_DOMAIN.toString(),
   );
   authUrl.searchParams.append(
     'redirect_uri',
@@ -21,7 +21,7 @@ export const generateGoogleOAuthUrl = () => {
   );
   authUrl.searchParams.append(
     'client_id',
-    import.meta.env.VITE_GOOGLE_CLIENT_ID.toString(),
+    import.meta.env.VITE_GOOGLE_LOGIN_CLIENT_ID.toString(),
   );
 
   return authUrl.toString();

@@ -5,13 +5,16 @@
   display: flex;
 }
 
-.home-page-login-button {
-  position: fixed;
-  top: 1.9rem;
-  right: 1.9rem;
+.home__profile-buttons-container {
+  display: flex;
+  top: 0;
+  right: 0;
+  justify-content: flex-end;
+  position: absolute;
+  padding: 1.9rem;
 }
 
-.home > .sag-button--secondary {
+.home__profile-buttons-container > .sag-button--secondary {
   padding: 0.4rem 1.2rem;
   border-radius: var(--rounded-button-border-radius);
   font-weight: 600;
