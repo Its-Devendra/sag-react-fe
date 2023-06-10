@@ -1,8 +1,9 @@
 .sag-filter__section {
+  display: flexbox;
   position: absolute;
   width: 15rem;
   height: 39rem;
-  left: 6.5rem;
+  margin-left: 2rem;
   top: 6rem;
   background-color: #fff;
   text-align: left;
@@ -17,7 +18,7 @@
   margin-left: 1.5rem;
   border-bottom: 0.07rem solid var(--color-secondary);
   max-width: 80%;
-} 
+}
 
 .sag-filter {
   --bs-accordion-border-radius: none;
@@ -49,17 +50,24 @@
 }
 
 .sag-filter__item {
+  display: flex;
+  flex-direction: column;
   border: none;
   border-bottom: 0.07rem solid var(--color-secondary);
   max-width: 85%;
   margin: auto;
+  width: 15rem;
 }
 
 .sag-filter__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: -1.2rem;
-  margin-left: -0.6rem;
   font-weight: 400;
   font-size: 0.9rem;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .accordion {
