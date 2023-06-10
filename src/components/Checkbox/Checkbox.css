@@ -1,0 +1,18 @@
+.sag-checkbox {
+  cursor: pointer;
+  border-color: var(--color-primary);
+  box-shadow: none !important;
+}
+
+.sag-checkbox:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.sag-checkbox:focus {
+  border-color: var(--color-primary);
+}
+
+.sag-checkbox__label {
+  cursor: pointer;
+}

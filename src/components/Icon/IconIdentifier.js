@@ -9,6 +9,7 @@ export const IconIdentifier = {
   ChevronLeft: 'chevron-left',
   ChevronRight: 'chevron-right',
   ChevronUp: 'chevron-up',
+  Cross: 'cross',
   Error: 'Error',
   Eye: 'eye',
   EyeHide: 'eye-hide',

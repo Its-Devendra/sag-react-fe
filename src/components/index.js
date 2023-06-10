@@ -5,3 +5,5 @@ export { default as Icon, IconIdentifier } from './Icon';
 export { default as PhotoCarousel, PhotoCarouselItem } from './PhotoCarousel';
 export { default as Pill } from './Pill';
 export { default as EventCalendar } from './EventCalendar';
+export { default as ToastManager } from './Toast';
+export { default as Checkbox } from './Checkbox';

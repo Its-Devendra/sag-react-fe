@@ -1,0 +1,41 @@
+/* Notification Button. */
+.notification-button {
+    padding: 0;
+    border-radius: 50%;
+}
+.notification-button > .sag-icon {
+    margin: 0.5rem;
+}
+
+
+/* Notification Overlay. */
+.notification-button__overlay {
+    position: absolute;
+    height: 20.5rem;
+    width: 20.6rem;
+    margin-top: 0.2rem;
+    margin-left: -1.5rem;
+    background-color: white;
+    border-radius: 12px;
+    filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.25));
+}
+
+.notification-button__overlay__no-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.notification-button__overlay__no-content > .illustration {
+    width: 5.4rem;
+    height: auto;
+}
+.notification-button__overlay__no-content > p {
+    font-size: 0.75rem;
+}
+.notification-button__overlay__no-content > p > strong {
+    font-size: 1.3rem;
+}

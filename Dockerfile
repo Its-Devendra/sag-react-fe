@@ -1,5 +1,13 @@
 # Ref: https://www.knowledgehut.com/blog/web-development/how-to-dockerize-react-app
 FROM node:16-alpine3.16 as builder
+
+# Import env vars.
+ARG VITE_BACKEND_URL
+ARG VITE_GOOGLE_LOGIN_CLIENT_ID
+ARG VITE_GOOGLE_LOGIN_HOST_DOMAIN
+ARG VITE_GOOGLE_LOGIN_REDIRECT_URI
+ARG VITE_GOOGLE_LOGIN_SCOPES
+
 WORKDIR /app
 
 # Install dependencies

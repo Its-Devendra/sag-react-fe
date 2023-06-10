@@ -1,0 +1,71 @@
+.sag-filter__section {
+  position: absolute;
+  width: 15rem;
+  height: 39rem;
+  left: 6.5rem;
+  top: 6rem;
+  background-color: #fff;
+  text-align: left;
+  border-radius: 0.9rem;
+}
+
+.sag-filter__header {
+  display: flex;
+  align-items: baseline;
+  gap: 4.4rem;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+  border-bottom: 0.07rem solid var(--color-secondary);
+  max-width: 80%;
+} 
+
+.sag-filter {
+  --bs-accordion-border-radius: none;
+}
+
+.accordion-button {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.12rem;
+}
+
+.accordion-button::after {
+  content: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #fff;
+  color: black;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  color: none;
+}
+
+.sag-filter__chevron-icon {
+  margin-left: auto;
+}
+
+.sag-filter__item {
+  border: none;
+  border-bottom: 0.07rem solid var(--color-secondary);
+  max-width: 85%;
+  margin: auto;
+}
+
+.sag-filter__body {
+  margin-top: -1.2rem;
+  margin-left: -0.6rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.accordion {
+  --bs-accordion-btn-padding-x: 0.36rem;
+}
+
+.form-check {
+  margin-bottom: 0rem;
+}

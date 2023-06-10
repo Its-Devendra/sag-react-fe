@@ -1,0 +1,18 @@
+.filter-clear-all {
+  color: var(--color-hyperlink-blue);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.filter-clear-all:hover,
+.filter-clear-all:focus {
+  color: var(--color-hyperlink-blue);
+  cursor: pointer;
+}
+
+.filter-clear-all:active {
+  background-color: transparent !important;
+}
+

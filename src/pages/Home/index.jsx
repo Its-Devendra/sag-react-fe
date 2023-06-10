@@ -1,10 +1,10 @@
 import React from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { Button, ButtonVariant } from '../../components';
-import { PageWrapper, SideBar } from './components';
+import { NotificationButton, PageWrapper, SideBar } from './components';
 import { isAuthenticated } from '../../helpers';
-import './Home.css';
 import { Login } from '../Login';
+import './Home.css';
 
 export const Home = () => {
   // Hooks.
@@ -24,23 +24,21 @@ export const Home = () => {
 
     if (!isAuthenticated()) {
       return (
-        <Button
-          className="home-page-login-button"
-          variant={ButtonVariant.Secondary}
-          onClick={onClickLoginHandler}
-        >
+        <Button variant={ButtonVariant.Secondary} onClick={onClickLoginHandler}>
           Login
         </Button>
       );
     }
 
-    // TODO: Show profile buttons if authenticated
+    return <NotificationButton />;
   };
 
   return (
     <div className="home">
       {/* Profile Button Components */}
-      {renderProfileButtons()}
+      <div className="home__profile-buttons-container">
+        {renderProfileButtons()}
+      </div>
 
       {/* Navigation Panel Component */}
       <SideBar />
